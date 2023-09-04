@@ -2,7 +2,20 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
-public class Attack : MonoBehaviour
+/*
+Required Features
+    Attack Button
+    Cooldown after each attack
+    Will aim the closest enemy within line of sight
+    mark closest enemy
+    Summon bullet 
+    attack animation
+
+Editable in editor
+    Attack damage
+    Attack CD
+*/
+public class PlayerAttack : MonoBehaviour
 {
     void Update()
     {
