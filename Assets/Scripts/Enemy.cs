@@ -4,17 +4,16 @@ using UnityEngine;
 
 /*
 Required Features
-    Move forward
-    Deal Damage to enemy
+    Move towards player
+    Deal Damage when collide with player
 
 Editable in editor
     Movement speed
     Damage
 */
 
-public class Bullet : MonoBehaviour
+public class Enemy : MonoBehaviour
 {
-    public GameObject bullet;
     // Start is called before the first frame update
     void Start()
     {
