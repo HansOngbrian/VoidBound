@@ -26,7 +26,7 @@ public class Bullet : MonoBehaviour
     }
     private void FixedUpdate()
     {
-        rb.AddForce(transform.up * Speed*Time.deltaTime);
+        rb.AddForce(transform.forward * Speed*Time.deltaTime);
     }
     // Update is called once per frame
    
