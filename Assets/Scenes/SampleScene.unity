@@ -1831,7 +1831,7 @@ GameObject:
   - component: {fileID: 1472742893}
   - component: {fileID: 1472742894}
   m_Layer: 0
-  m_Name: Square
+  m_Name: AimArrow
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -2136,19 +2136,7 @@ MonoBehaviour:
   m_TargetGraphic: {fileID: 1499897652}
   m_OnClick:
     m_PersistentCalls:
-      m_Calls:
-      - m_Target: {fileID: 1700773920}
-        m_TargetAssemblyTypeName: PlayerAttack, Assembly-CSharp
-        m_MethodName: SpawnBullet
-        m_Mode: 1
-        m_Arguments:
-          m_ObjectArgument: {fileID: 0}
-          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
-          m_IntArgument: 0
-          m_FloatArgument: 0
-          m_StringArgument: 
-          m_BoolArgument: 0
-        m_CallState: 2
+      m_Calls: []
 --- !u!114 &1499897652
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -5968,6 +5956,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: b96ee45d7e7aa9941aaeebebec4b8609, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  BulletPrefab: {fileID: 5455001249596193732, guid: 4e60b6658de1df84696d3d0de4e5ed8c, type: 3}
+  AttackPrefab: {fileID: 2541815816085206258, guid: 7f73e45bd42d66340a66cdffc13a7d31, type: 3}
   AttackButton: {fileID: 1499897651}
+  Meele: 1
+  MeeleDur: 0.3
   AttackSpeed: 0.5
