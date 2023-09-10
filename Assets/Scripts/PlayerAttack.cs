@@ -19,12 +19,19 @@ Editable in editor
 
 public class PlayerAttack : MonoBehaviour
 {
-    public GameObject BulletPrefab;
+    public GameObject AttackPrefab;
     public Button AttackButton;
+    public bool Meele;
+    public float MeeleDur;
     public float AttackSpeed;
 
     bool _attacked;
     float _timer;
+
+    private void Start()
+    {
+        AttackButton.onClick.AddListener(Attack);
+    }
 
     void Update()
     {
@@ -48,15 +55,30 @@ public class PlayerAttack : MonoBehaviour
         }
     }
 
-    public void SpawnBullet()
+    public void Attack()
     {
-        Instantiate(BulletPrefab, transform.position, transform.rotation * BulletPrefab.transform.rotation);
-        AttackCooldown();
+        if (!Meele)
+        {
+            Instantiate(AttackPrefab, transform.position, transform.rotation * AttackPrefab.transform.rotation);
+            AttackCooldown();
+        }
+        else
+        {
+            StartCoroutine(MeeleAttack());
+            AttackCooldown();
+        }
     }
 
     private void AttackCooldown()
     {
         _attacked = true;
         AttackButton.interactable = false;
+    }
+
+    private IEnumerator MeeleAttack()
+    {
+        GameObject go = Instantiate(AttackPrefab, transform);
+        yield return new WaitForSeconds(MeeleDur);
+        Destroy(go);
     }
 }
