@@ -4,7 +4,7 @@ using UnityEngine;
 
 /*
 Required Features
-    Move bullet towards enemy
+    Move forward
     Deal Damage to enemy
 
 Editable in editor
